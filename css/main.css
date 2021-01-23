@@ -5,13 +5,6 @@ html {
     font-family: 'Nunito';
 }
 
-/* h1 {
-    font-size: 160px;
-    color: #ffffff;
-} */
-
-
-/* DEMO-SPECIFIC STYLES */
 h1 {
     font-size: 120px;
     color: #fff;
@@ -29,16 +22,19 @@ h1 {
     from {
         width: 0
     }
+
     to {
         width: 100%
     }
 }
 
 @keyframes blink-caret {
+
     from,
     to {
         border-color: transparent
     }
+
     50% {
         border-color: orange
     }
@@ -70,3 +66,23 @@ h4 {
     top: 8px;
     left: 16px;
 }
+
+.top-right {
+    position: absolute;
+    top: 2px;
+    right: 16px;
+}
+
+.column {
+    float: left;
+    
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
