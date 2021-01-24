@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web-Lab KIIT" />
+    <meta name="keywords" content="HTML WEB LAB EVALUATION" />
+    <meta name="author" content="Sayan Nath" />
+    <title>Gallery - Sayan Nath</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/favicon/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/gallery.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2 style="color: white">Image Gallery</h2>
+      <p style="color: white">Click on the images below:</p>
+    </div>
+
+    <!-- The four columns -->
+    <div class="row">
+      <div class="column">
+        <img
+          src="../assets/gallery/1.jpg"
+          alt="Sayan Nath"
+          style="width: 100%"
+          onclick="myFunction(this);"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="../assets/gallery/2.jpg"
+          alt="Sayan Nath"
+          style="width: 100%"
+          onclick="myFunction(this);"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="../assets/gallery/3.jpg"
+          alt="Sayan Nath"
+          style="width: 100%"
+          onclick="myFunction(this);"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="../assets/gallery/4.jpg"
+          alt="Sayan Nath"
+          style="width: 100%"
+          onclick="myFunction(this);"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn"
+        >&times;</span
+      >
+      <img id="expandedImg" style="width: 100%" />
+      <div id="imgtext"></div>
+    </div>
+
+    <script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
